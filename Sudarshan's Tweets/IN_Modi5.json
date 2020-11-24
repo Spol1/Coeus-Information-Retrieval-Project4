@@ -1,0 +1,592 @@
+{
+    "created_at": "Fri Sep 18 14:54:43 +0000 2020",
+    "id": 1306969908115394561,
+    "id_str": "1306969908115394561",
+    "full_text": "\u05d0\u05d9\u05d7\u05d5\u05dc\u05d9\u05dd \u05dc\u05d1\u05d1\u05d9\u05d9\u05dd \u05dc\u05d9\u05d3\u05d9\u05d3\u05d9 @netanyahu \u05e0\u05ea\u05e0\u05d9\u05d4\u05d5, \u05dc\u05d0\u05d6\u05e8\u05d7\u05d9 \u05d9\u05e9\u05e8\u05d0\u05dc \u05d5\u05dc\u05e2\u05dd \u05d4\u05d9\u05d4\u05d5\u05d3\u05d9 \u05d1\u05ea\u05e4\u05d5\u05e6\u05d5\u05ea. \u05de\u05d0\u05d7\u05dc \u05e9\u05e0\u05d4 \u05e9\u05dc  \u05d1\u05e8\u05d9\u05d0\u05d5\u05ea, \u05e9\u05dc\u05d5\u05dd \u05d5\u05e9\u05d2\u05e9\u05d5\u05d2 \u05d1\u05d7\u05d9\u05d9\u05dd \u05e9\u05dc \u05db\u05d5\u05dc\u05e0\u05d5.\n \u05e9\u05e0\u05d4 \u05d8\u05d5\u05d1\u05d4!",
+    "truncated": false,
+    "display_text_range": [0, 134],
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [{
+                "screen_name": "netanyahu",
+                "name": "Benjamin Netanyahu",
+                "id": 17061263,
+                "id_str": "17061263",
+                "indices": [22, 32]
+            }
+        ],
+        "urls": []
+    },
+    "metadata": {
+        "iso_language_code": "iw",
+        "result_type": "recent"
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 18839785,
+        "id_str": "18839785",
+        "name": "Narendra Modi",
+        "screen_name": "narendramodi",
+        "location": "India",
+        "description": "Prime Minister of India",
+        "url": "https://t.co/zzYhUUfq6i",
+        "entities": {
+            "url": {
+                "urls": [{
+                        "url": "https://t.co/zzYhUUfq6i",
+                        "expanded_url": "http://www.narendramodi.in",
+                        "display_url": "narendramodi.in",
+                        "indices": [0, 23]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 62506435,
+        "friends_count": 2355,
+        "listed_count": 25442,
+        "created_at": "Sat Jan 10 17:18:56 +0000 2009",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 27643,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F4EDD4",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/18839785/1559221352",
+        "profile_link_color": "4E7096",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "D5DFED",
+        "profile_text_color": "233863",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "regular"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 4033,
+    "favorite_count": 41191,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "iw",
+    "country": "India",
+    "tweet_date": "2020-09-18 14:00:00",
+    "poi_id": 18839785,
+    "poi_name": "narendramodi",
+    "tweet_text": "\u05d0\u05d9\u05d7\u05d5\u05dc\u05d9\u05dd \u05dc\u05d1\u05d1\u05d9\u05d9\u05dd \u05dc\u05d9\u05d3\u05d9\u05d3\u05d9 @netanyahu \u05e0\u05ea\u05e0\u05d9\u05d4\u05d5, \u05dc\u05d0\u05d6\u05e8\u05d7\u05d9 \u05d9\u05e9\u05e8\u05d0\u05dc \u05d5\u05dc\u05e2\u05dd \u05d4\u05d9\u05d4\u05d5\u05d3\u05d9 \u05d1\u05ea\u05e4\u05d5\u05e6\u05d5\u05ea. \u05de\u05d0\u05d7\u05dc \u05e9\u05e0\u05d4 \u05e9\u05dc  \u05d1\u05e8\u05d9\u05d0\u05d5\u05ea, \u05e9\u05dc\u05d5\u05dd \u05d5\u05e9\u05d2\u05e9\u05d5\u05d2 \u05d1\u05d7\u05d9\u05d9\u05dd \u05e9\u05dc \u05db\u05d5\u05dc\u05e0\u05d5.\n \u05e9\u05e0\u05d4 \u05d8\u05d5\u05d1\u05d4!",
+    "tweet_lang": "iw",
+    "mentions": ["netanyahu"],
+    "hashtags": [],
+    "tweet_urls": []
+} {
+    "created_at": "Mon Sep 14 14:07:52 +0000 2020",
+    "id": 1305508567903019010,
+    "id_str": "1305508567903019010",
+    "full_text": "\u092c\u093f\u0939\u093e\u0930 \u092e\u0947\u0902 Urban Infrastructure \u0915\u094b \u0915\u0932 \u090f\u0915 \u0928\u0908 \u092e\u091c\u092c\u0942\u0924\u0940 \u092e\u093f\u0932\u0947\u0917\u0940\u0964 \u0926\u094b\u092a\u0939\u0930 12 \u092c\u091c\u0947 \u0935\u0930\u094d\u091a\u0941\u0905\u0932 \u092e\u093e\u0927\u094d\u092f\u092e \u0938\u0947 7 \u092a\u0930\u093f\u092f\u094b\u091c\u0928\u093e\u0913\u0902 \u0915\u093e \u0909\u0926\u094d\u0918\u093e\u091f\u0928 \u0935 \u0936\u093f\u0932\u093e\u0928\u094d\u092f\u093e\u0938 \u0939\u094b\u0917\u093e\u0964 \u0907\u0928\u092e\u0947\u0902 \u091c\u0932 \u0906\u092a\u0942\u0930\u094d\u0924\u093f, \u0938\u0940\u0935\u0930\u0947\u091c \u091f\u094d\u0930\u0940\u091f\u092e\u0947\u0902\u091f \u0914\u0930 \u0930\u093f\u0935\u0930 \u092b\u094d\u0930\u0902\u091f \u0921\u0947\u0935\u0932\u092a\u092e\u0947\u0902\u091f \u0938\u0947 \u0938\u0902\u092c\u0902\u0927\u093f\u0924 \u092a\u0930\u093f\u092f\u094b\u091c\u0928\u093e\u090f\u0902 \u0936\u093e\u092e\u093f\u0932 \u0939\u0948\u0902\u0964\n\n#TransformingUrbanBihar \n\nhttps://t.co/nEUvlqWQcd",
+    "truncated": false,
+    "display_text_range": [0, 273],
+    "entities": {
+        "hashtags": [{
+                "text": "TransformingUrbanBihar",
+                "indices": [224, 247]
+            }
+        ],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [{
+                "url": "https://t.co/nEUvlqWQcd",
+                "expanded_url": "http://nm-4.com/ojm9",
+                "display_url": "nm-4.com/ojm9",
+                "indices": [250, 273]
+            }
+        ]
+    },
+    "metadata": {
+        "iso_language_code": "hi",
+        "result_type": "recent"
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 18839785,
+        "id_str": "18839785",
+        "name": "Narendra Modi",
+        "screen_name": "narendramodi",
+        "location": "India",
+        "description": "Prime Minister of India",
+        "url": "https://t.co/zzYhUUfq6i",
+        "entities": {
+            "url": {
+                "urls": [{
+                        "url": "https://t.co/zzYhUUfq6i",
+                        "expanded_url": "http://www.narendramodi.in",
+                        "display_url": "narendramodi.in",
+                        "indices": [0, 23]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 62506447,
+        "friends_count": 2355,
+        "listed_count": 25442,
+        "created_at": "Sat Jan 10 17:18:56 +0000 2009",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 27643,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F4EDD4",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/18839785/1559221352",
+        "profile_link_color": "4E7096",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "D5DFED",
+        "profile_text_color": "233863",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "regular"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 4825,
+    "favorite_count": 32077,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "hi",
+    "country": "India",
+    "tweet_date": "2020-09-14 14:00:00",
+    "poi_id": 18839785,
+    "poi_name": "narendramodi",
+    "tweet_text": "\u092c\u093f\u0939\u093e\u0930 \u092e\u0947\u0902 Urban Infrastructure \u0915\u094b \u0915\u0932 \u090f\u0915 \u0928\u0908 \u092e\u091c\u092c\u0942\u0924\u0940 \u092e\u093f\u0932\u0947\u0917\u0940\u0964 \u0926\u094b\u092a\u0939\u0930 12 \u092c\u091c\u0947 \u0935\u0930\u094d\u091a\u0941\u0905\u0932 \u092e\u093e\u0927\u094d\u092f\u092e \u0938\u0947 7 \u092a\u0930\u093f\u092f\u094b\u091c\u0928\u093e\u0913\u0902 \u0915\u093e \u0909\u0926\u094d\u0918\u093e\u091f\u0928 \u0935 \u0936\u093f\u0932\u093e\u0928\u094d\u092f\u093e\u0938 \u0939\u094b\u0917\u093e\u0964 \u0907\u0928\u092e\u0947\u0902 \u091c\u0932 \u0906\u092a\u0942\u0930\u094d\u0924\u093f, \u0938\u0940\u0935\u0930\u0947\u091c \u091f\u094d\u0930\u0940\u091f\u092e\u0947\u0902\u091f \u0914\u0930 \u0930\u093f\u0935\u0930 \u092b\u094d\u0930\u0902\u091f \u0921\u0947\u0935\u0932\u092a\u092e\u0947\u0902\u091f \u0938\u0947 \u0938\u0902\u092c\u0902\u0927\u093f\u0924 \u092a\u0930\u093f\u092f\u094b\u091c\u0928\u093e\u090f\u0902 \u0936\u093e\u092e\u093f\u0932 \u0939\u0948\u0902\u0964\n\n#TransformingUrbanBihar \n\nhttps://t.co/nEUvlqWQcd",
+    "tweet_lang": "hi",
+    "mentions": [],
+    "hashtags": ["TransformingUrbanBihar"],
+    "tweet_urls": ["http://nm-4.com/ojm9"]
+} {
+    "created_at": "Tue Sep 15 13:54:51 +0000 2020",
+    "id": 1305867680138891264,
+    "id_str": "1305867680138891264",
+    "full_text": "\u0926\u0930\u092d\u0902\u0917\u093e \u092e\u0947\u0902 \u090f\u092e\u094d\u0938 \u0915\u0947 \u0928\u093f\u0930\u094d\u092e\u093e\u0923 \u0938\u0947 \u091c\u0939\u093e\u0902 \u092c\u093f\u0939\u093e\u0930 \u0915\u0947 \u0939\u0947\u0932\u094d\u0925 \u0907\u0902\u092b\u094d\u0930\u093e\u0938\u094d\u091f\u094d\u0930\u0915\u094d\u091a\u0930 \u0915\u094b \u092e\u091c\u092c\u0942\u0924\u0940 \u092e\u093f\u0932\u0947\u0917\u0940, \u0935\u0939\u0940\u0902 \u0938\u094d\u0935\u0938\u094d\u0925 \u092d\u093e\u0930\u0924 \u0915\u0947 \u0938\u0902\u0915\u0932\u094d\u092a \u0915\u094b \u092d\u0940 \u0928\u092f\u093e \u092c\u0932 \u092e\u093f\u0932\u0947\u0917\u093e\u0964 \u0907\u0938\u0938\u0947 \u0928 \u0915\u0947\u0935\u0932 \u0939\u0947\u0932\u094d\u0925\u0915\u0947\u092f\u0930 \u092a\u094d\u0930\u094b\u092b\u0947\u0936\u0928\u0932\u094d\u0938 \u0915\u094b \u091f\u094d\u0930\u0947\u0928\u093f\u0902\u0917 \u092e\u093f\u0932\u0947\u0917\u0940, \u092c\u0932\u094d\u0915\u093f \u0906\u0938\u092a\u093e\u0938 \u0915\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u094b \u0930\u094b\u091c\u0917\u093e\u0930 \u092d\u0940 \u092a\u094d\u0930\u093e\u092a\u094d\u0924 \u0939\u094b\u0917\u093e\u0964\n\nhttps://t.co/kPP5WFJpil",
+    "truncated": false,
+    "display_text_range": [0, 258],
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [{
+                "url": "https://t.co/kPP5WFJpil",
+                "expanded_url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1654424",
+                "display_url": "pib.gov.in/PressReleasePa\u2026",
+                "indices": [235, 258]
+            }
+        ]
+    },
+    "metadata": {
+        "iso_language_code": "hi",
+        "result_type": "recent"
+    },
+    "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 18839785,
+        "id_str": "18839785",
+        "name": "Narendra Modi",
+        "screen_name": "narendramodi",
+        "location": "India",
+        "description": "Prime Minister of India",
+        "url": "https://t.co/zzYhUUfq6i",
+        "entities": {
+            "url": {
+                "urls": [{
+                        "url": "https://t.co/zzYhUUfq6i",
+                        "expanded_url": "http://www.narendramodi.in",
+                        "display_url": "narendramodi.in",
+                        "indices": [0, 23]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 62506455,
+        "friends_count": 2355,
+        "listed_count": 25442,
+        "created_at": "Sat Jan 10 17:18:56 +0000 2009",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 27643,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F4EDD4",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/18839785/1559221352",
+        "profile_link_color": "4E7096",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "D5DFED",
+        "profile_text_color": "233863",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "regular"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 7212,
+    "favorite_count": 50936,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "hi",
+    "country": "India",
+    "tweet_date": "2020-09-15 13:00:00",
+    "poi_id": 18839785,
+    "poi_name": "narendramodi",
+    "tweet_text": "\u0926\u0930\u092d\u0902\u0917\u093e \u092e\u0947\u0902 \u090f\u092e\u094d\u0938 \u0915\u0947 \u0928\u093f\u0930\u094d\u092e\u093e\u0923 \u0938\u0947 \u091c\u0939\u093e\u0902 \u092c\u093f\u0939\u093e\u0930 \u0915\u0947 \u0939\u0947\u0932\u094d\u0925 \u0907\u0902\u092b\u094d\u0930\u093e\u0938\u094d\u091f\u094d\u0930\u0915\u094d\u091a\u0930 \u0915\u094b \u092e\u091c\u092c\u0942\u0924\u0940 \u092e\u093f\u0932\u0947\u0917\u0940, \u0935\u0939\u0940\u0902 \u0938\u094d\u0935\u0938\u094d\u0925 \u092d\u093e\u0930\u0924 \u0915\u0947 \u0938\u0902\u0915\u0932\u094d\u092a \u0915\u094b \u092d\u0940 \u0928\u092f\u093e \u092c\u0932 \u092e\u093f\u0932\u0947\u0917\u093e\u0964 \u0907\u0938\u0938\u0947 \u0928 \u0915\u0947\u0935\u0932 \u0939\u0947\u0932\u094d\u0925\u0915\u0947\u092f\u0930 \u092a\u094d\u0930\u094b\u092b\u0947\u0936\u0928\u0932\u094d\u0938 \u0915\u094b \u091f\u094d\u0930\u0947\u0928\u093f\u0902\u0917 \u092e\u093f\u0932\u0947\u0917\u0940, \u092c\u0932\u094d\u0915\u093f \u0906\u0938\u092a\u093e\u0938 \u0915\u0947 \u0932\u094b\u0917\u094b\u0902 \u0915\u094b \u0930\u094b\u091c\u0917\u093e\u0930 \u092d\u0940 \u092a\u094d\u0930\u093e\u092a\u094d\u0924 \u0939\u094b\u0917\u093e\u0964\n\nhttps://t.co/kPP5WFJpil",
+    "tweet_lang": "hi",
+    "mentions": [],
+    "hashtags": [],
+    "tweet_urls": ["https://pib.gov.in/PressReleasePage.aspx?PRID=1654424"]
+} {
+    "created_at": "Wed Sep 16 17:15:40 +0000 2020",
+    "id": 1306280603738951681,
+    "id_str": "1306280603738951681",
+    "full_text": "Shri P. R. Krishna Kumar\u2019s persistent, enterprising and mission-mode efforts contributed to Ayurveda\u2019s global popularity. He was an extremely humble and knowledgeable person. Pained by his demise. Condolences to his family. Om Shanti. https://t.co/BKZjWHfm2i",
+    "truncated": false,
+    "display_text_range": [0, 234],
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": [],
+        "media": [{
+                "id": 1306280582796554240,
+                "id_str": "1306280582796554240",
+                "indices": [235, 258],
+                "media_url": "http://pbs.twimg.com/media/EiDXROKUMAAdGAk.jpg",
+                "media_url_https": "https://pbs.twimg.com/media/EiDXROKUMAAdGAk.jpg",
+                "url": "https://t.co/BKZjWHfm2i",
+                "display_url": "pic.twitter.com/BKZjWHfm2i",
+                "expanded_url": "https://twitter.com/narendramodi/status/1306280603738951681/photo/1",
+                "type": "photo",
+                "sizes": {
+                    "thumb": {
+                        "w": 150,
+                        "h": 150,
+                        "resize": "crop"
+                    },
+                    "large": {
+                        "w": 590,
+                        "h": 520,
+                        "resize": "fit"
+                    },
+                    "small": {
+                        "w": 590,
+                        "h": 520,
+                        "resize": "fit"
+                    },
+                    "medium": {
+                        "w": 590,
+                        "h": 520,
+                        "resize": "fit"
+                    }
+                }
+            }
+        ]
+    },
+    "extended_entities": {
+        "media": [{
+                "id": 1306280582796554240,
+                "id_str": "1306280582796554240",
+                "indices": [235, 258],
+                "media_url": "http://pbs.twimg.com/media/EiDXROKUMAAdGAk.jpg",
+                "media_url_https": "https://pbs.twimg.com/media/EiDXROKUMAAdGAk.jpg",
+                "url": "https://t.co/BKZjWHfm2i",
+                "display_url": "pic.twitter.com/BKZjWHfm2i",
+                "expanded_url": "https://twitter.com/narendramodi/status/1306280603738951681/photo/1",
+                "type": "photo",
+                "sizes": {
+                    "thumb": {
+                        "w": 150,
+                        "h": 150,
+                        "resize": "crop"
+                    },
+                    "large": {
+                        "w": 590,
+                        "h": 520,
+                        "resize": "fit"
+                    },
+                    "small": {
+                        "w": 590,
+                        "h": 520,
+                        "resize": "fit"
+                    },
+                    "medium": {
+                        "w": 590,
+                        "h": 520,
+                        "resize": "fit"
+                    }
+                }
+            }
+        ]
+    },
+    "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 18839785,
+        "id_str": "18839785",
+        "name": "Narendra Modi",
+        "screen_name": "narendramodi",
+        "location": "India",
+        "description": "Prime Minister of India",
+        "url": "https://t.co/zzYhUUfq6i",
+        "entities": {
+            "url": {
+                "urls": [{
+                        "url": "https://t.co/zzYhUUfq6i",
+                        "expanded_url": "http://www.narendramodi.in",
+                        "display_url": "narendramodi.in",
+                        "indices": [0, 23]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 62506457,
+        "friends_count": 2355,
+        "listed_count": 25442,
+        "created_at": "Sat Jan 10 17:18:56 +0000 2009",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 27643,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F4EDD4",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/18839785/1559221352",
+        "profile_link_color": "4E7096",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "D5DFED",
+        "profile_text_color": "233863",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "regular"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 5434,
+    "favorite_count": 49985,
+    "favorited": false,
+    "retweeted": false,
+    "possibly_sensitive": false,
+    "lang": "en",
+    "country": "India",
+    "tweet_date": "2020-09-16 17:00:00",
+    "poi_id": 18839785,
+    "poi_name": "narendramodi",
+    "tweet_text": "Shri P. R. Krishna Kumar\u2019s persistent, enterprising and mission-mode efforts contributed to Ayurveda\u2019s global popularity. He was an extremely humble and knowledgeable person. Pained by his demise. Condolences to his family. Om Shanti. https://t.co/BKZjWHfm2i",
+    "tweet_lang": "en",
+    "mentions": [],
+    "hashtags": [],
+    "tweet_urls": []
+} {
+    "created_at": "Thu Sep 17 19:08:39 +0000 2020",
+    "id": 1306671426930225152,
+    "id_str": "1306671426930225152",
+    "full_text": "Since many have asked, what is it that I want for my birthday, here is what I seek right now:\n\nKeep wearing a mask and wear it properly.\n\nFollow social distancing. Remember \u2018Do Gaj Ki Doori.\u2019\n\nAvoid crowded spaces.\n\nImprove your immunity. \n\nLet us make our planet healthy.",
+    "truncated": false,
+    "display_text_range": [0, 272],
+    "entities": {
+        "hashtags": [],
+        "symbols": [],
+        "user_mentions": [],
+        "urls": []
+    },
+    "metadata": {
+        "iso_language_code": "en",
+        "result_type": "recent"
+    },
+    "source": "<a href=\"https://mobile.twitter.com\" rel=\"nofollow\">Twitter Web App</a>",
+    "in_reply_to_status_id": null,
+    "in_reply_to_status_id_str": null,
+    "in_reply_to_user_id": null,
+    "in_reply_to_user_id_str": null,
+    "in_reply_to_screen_name": null,
+    "user": {
+        "id": 18839785,
+        "id_str": "18839785",
+        "name": "Narendra Modi",
+        "screen_name": "narendramodi",
+        "location": "India",
+        "description": "Prime Minister of India",
+        "url": "https://t.co/zzYhUUfq6i",
+        "entities": {
+            "url": {
+                "urls": [{
+                        "url": "https://t.co/zzYhUUfq6i",
+                        "expanded_url": "http://www.narendramodi.in",
+                        "display_url": "narendramodi.in",
+                        "indices": [0, 23]
+                    }
+                ]
+            },
+            "description": {
+                "urls": []
+            }
+        },
+        "protected": false,
+        "followers_count": 62506466,
+        "friends_count": 2355,
+        "listed_count": 25442,
+        "created_at": "Sat Jan 10 17:18:56 +0000 2009",
+        "favourites_count": 0,
+        "utc_offset": null,
+        "time_zone": null,
+        "geo_enabled": false,
+        "verified": true,
+        "statuses_count": 27643,
+        "lang": null,
+        "contributors_enabled": false,
+        "is_translator": false,
+        "is_translation_enabled": false,
+        "profile_background_color": "F4EDD4",
+        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_tile": false,
+        "profile_image_url": "http://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/1249934092994375680/xX66NSZP_normal.jpg",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners/18839785/1559221352",
+        "profile_link_color": "4E7096",
+        "profile_sidebar_border_color": "FFFFFF",
+        "profile_sidebar_fill_color": "D5DFED",
+        "profile_text_color": "233863",
+        "profile_use_background_image": true,
+        "has_extended_profile": true,
+        "default_profile": false,
+        "default_profile_image": false,
+        "following": false,
+        "follow_request_sent": false,
+        "notifications": false,
+        "translator_type": "regular"
+    },
+    "geo": null,
+    "coordinates": null,
+    "place": null,
+    "contributors": null,
+    "is_quote_status": false,
+    "retweet_count": 13656,
+    "favorite_count": 83559,
+    "favorited": false,
+    "retweeted": false,
+    "lang": "en",
+    "country": "India",
+    "tweet_date": "2020-09-17 19:00:00",
+    "poi_id": 18839785,
+    "poi_name": "narendramodi",
+    "tweet_text": "Since many have asked, what is it that I want for my birthday, here is what I seek right now:\n\nKeep wearing a mask and wear it properly.\n\nFollow social distancing. Remember \u2018Do Gaj Ki Doori.\u2019\n\nAvoid crowded spaces.\n\nImprove your immunity. \n\nLet us make our planet healthy.",
+    "tweet_lang": "en",
+    "mentions": [],
+    "hashtags": [],
+    "tweet_urls": []
+}
