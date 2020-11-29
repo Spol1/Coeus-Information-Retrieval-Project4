@@ -4,6 +4,7 @@ import plotly.graph_objects as go
 import json
 from flask import render_template
 import pandas as pd
+import os
 
 @app.route("/")
 def home():
@@ -20,7 +21,7 @@ def search_tweets():
     ]
     graphJson = json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
 
-    return render_template('index.html', graph = graphJson)
+    return render_template("index.html", graph = graphJson)
 
 
 @app.route("/solr_query")
