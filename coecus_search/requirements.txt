@@ -8,7 +8,7 @@ Jinja2==2.11.2
 lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
-numpy==1.19.4
+numpy==1.19.3
 pandas==1.1.4
 plotly==4.13.0
 pylint==2.6.0
