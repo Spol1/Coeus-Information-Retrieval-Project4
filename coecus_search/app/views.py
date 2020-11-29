@@ -1,10 +1,10 @@
 from app import app,db
+from indexer import hit_solr
 import plotly
 import plotly.graph_objects as go
 import json
 from flask import render_template
 import pandas as pd
-import os
 
 @app.route("/")
 def home():
@@ -12,20 +12,25 @@ def home():
 
 @app.route("/search")
 def search_tweets():
-    data = [
-        go.Bar(
-            x = ['Boy','Girl'],
-            y = [10, 15],
-            hovertemplate= '<i>%{x}</i> : ' + '<b>%{y}</b>'
-        )
-    ]
-    graphJson = json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
+    query = "trump covid19"
+    tweets = hit_solr(query)
 
-    return render_template("index.html", graph = graphJson)
+    # indexer 
+    # data = [
+    #     go.Bar(
+    #         x = ['Boy','Girl'],
+    #         y = [10, 15],
+    #         hovertemplate= '<i>%{x}</i> : ' + '<b>%{y}</b>'
+    #     )
+    # ]
+    # graphJson = json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
+
+    # return render_template("index.html", graph = graphJson)
+    return "Search complete"
 
 
-@app.route("/solr_query")
-def hit_solr():
+@app.route("/faceted")
+def facet_solr():
     # '/select?fl=id%2C%20score&q=text_en' + '%3A%20' + "trump%20covid"+'&rows=20&wt=json'
     list1 = json.load(open("person.json", 'r'))
     posts = db.tweets

@@ -1,0 +1,5 @@
+Module not found error, need to correct it
+
+1. in Sud's poi tweets, color" : to be replaced by colr" : "#
+2. need to improve managed-schema
+3. text_hi, text_en, text_it (it returns few tweets)
