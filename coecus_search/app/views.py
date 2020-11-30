@@ -13,7 +13,7 @@ def home():
 
 @app.route("/search")
 def search_tweets():
-    query = "deaths due to covid"
+    query = "trump killing usa"
     tweets = hit_solr(query)
     with open("fetched_tweets.json", 'w') as fout:
         json.dump(tweets , fout)
