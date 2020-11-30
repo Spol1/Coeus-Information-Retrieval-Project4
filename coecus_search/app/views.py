@@ -1,5 +1,5 @@
 from app import app,db
-from .indexer import hit_solr
+from .indexer import hit_solr, process_query
 import plotly
 import plotly.graph_objects as go
 import json
@@ -13,7 +13,7 @@ def home():
 
 @app.route("/search")
 def search_tweets():
-    query = "wear a mask when you leave home"
+    query = "deaths due to covid"
     tweets = hit_solr(query)
     with open("fetched_tweets.json", 'w') as fout:
         json.dump(tweets , fout)
