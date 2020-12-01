@@ -30,8 +30,8 @@ def hit_solr(query):
     query_hi = process_query(query_hi)
     query_it = process_query(query_it)
 
-    select_fields = "fl=" + process_query("id, country, user.screen_name, full_text, tweet_text, tweet_lang, tweet_date, score")
-# 
+    # select_fields = "fl=" + process_query("id, country, user.screen_name, full_text, tweet_text, tweet_lang, tweet_date, score")
+    select_fields = ""
     limit = "&indent=true&rows=5&wt=json"
     inurl = select_fields + "&q=" + "tweet_hashtags" + '%3A%20' + hashtags + or_string + 'text_en' + '%3A%20' + query_en + or_string + 'text_it' + '%3A%20' + query_it + or_string + 'text_hi' + '%3A%20' + query_hi
 
