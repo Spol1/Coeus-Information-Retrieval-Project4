@@ -1,0 +1,15 @@
+create a new folder called coecus_search
+open vs code ide and setup virtual env by: py -m venv venv 
+it will ask if you want to switch workspace, choose yes
+install pylint on vs code
+if prompted: pip install --upgrade pip 
+to activate virtual env venv, : go to coecus_search\venv\Scripts> activate (do cd venv/Scripts/)
+pip install flask
+create a new run.py file in coecus_search\
+create app/__init__.py and app/views.py
+run command: set FLASK_APP=run.py
+set FLASK=development
+
+flask run or just run from VS code:
+if you get some numpy error use: pip uninstall numpy,  then :  pip install numpy==1.19.3
+

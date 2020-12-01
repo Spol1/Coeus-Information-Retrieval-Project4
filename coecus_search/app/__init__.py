@@ -12,5 +12,5 @@ app = Flask(__name__)
 
 client = MongoClient("mongodb://localhost:27017/")
 db = client["tweetsDB"]
+from app import views, indexer
 
-from app import views

@@ -1,10 +1,11 @@
 from app import app,db
-from indexer import hit_solr
+from .indexer import hit_solr, process_query
 import plotly
 import plotly.graph_objects as go
 import json
 from flask import render_template
 import pandas as pd
+import json
 
 @app.route("/")
 def home():
@@ -12,8 +13,10 @@ def home():
 
 @app.route("/search")
 def search_tweets():
-    query = "trump covid19"
+    query = "modis message for india"
     tweets = hit_solr(query)
+    with open("fetched_tweets.json", 'w') as fout:
+        json.dump(tweets , fout)
 
     # indexer 
     # data = [
