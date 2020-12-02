@@ -10,7 +10,6 @@ import json
 
 app = Flask(__name__)
 
-client = MongoClient("mongodb://localhost:27017/")
-db = client["tweetsDB"]
+conn  = MongoClient("mongodb://localhost:27017/tweetsDB")
 from app import views, indexer
 

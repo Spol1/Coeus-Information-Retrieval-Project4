@@ -1,34 +1,39 @@
-from app import app,db
+from app import app, conn
 import urllib.request
 from urllib.parse import quote
-from googletrans import Translator
+# from googletrans import Translator
+# translator = Translator()
+
 import re
 import json
-translator = Translator()
+
 
 def process_query(query):
     return urllib.parse.quote_plus(query)
 
+
 def hit_solr(query):
-    
     core_name = "IRF20P4"
     ip_address = "http://localhost:8983/solr/"
     select_ = "/select?"
     or_string = "%20OR%20"
     and_string = "%20AND%20"
-    querylang = translator.detect([query])[0].lang
+
+    # querylang = translator.detect(query).lang
+    querylang = 'en'
     hashtags = re.findall(r"#(\w+)", query)
     hashtags = str(hashtags)
-    hashtags = hashtags.replace('[','')
-    hashtags = hashtags.replace(']','')
+    hashtags = hashtags.replace('[', '')
+    hashtags = hashtags.replace(']', '')
     hashtags = quote(hashtags)
-    query_en = translator.translate(query, dest='en').text
-    query_it = translator.translate(query, dest='it').text
-    query_hi = translator.translate(query, dest='hi').text
+    # query_en = translator.translate(query, src='', dest='en').text
+    # query_it = translator.translate(query, src='', dest='it').text
+    # query_hi = translator.translate(query, src='', dest='hi').text
     # print(query_en + " || " + query_hi + " || " + query_it)
+    query_en = query
     query_en = process_query(query_en)
-    query_hi = process_query(query_hi)
-    query_it = process_query(query_it)
+    query_hi = process_query(query_en)
+    query_it = process_query(query_en)
 
     # select_fields = "fl=" + process_query("id, country, user.screen_name, full_text, tweet_text, tweet_lang, tweet_date, score")
     select_fields = ""
@@ -44,6 +49,11 @@ def hit_solr(query):
 
     inurl = ip_address + core_name + select_ + inurl + limit
     data = urllib.request.urlopen(inurl)
-    docs = json.load(data)['response']['docs']
+    docs = data.read()
+    docs = docs.decode('utf-8')
+    fin_data = json.loads(docs)
+    # docs = json.load(data)['response']['docs']
+    # print("*******", fin_data.response.numFound)
+    numFound = fin_data['response']['numFound']
 
-    return docs
+    return fin_data['response']['docs'], numFound
