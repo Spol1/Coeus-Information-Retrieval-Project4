@@ -74,16 +74,18 @@ def hit_solr():
         inurl = inurl + "&defType=dismax&qf=tweet_hashtags%5E1.7%20text_en%5E2.5%20text_hi%5E2.0%20text_it%5E2.0&tie=0.1"
 
     inurl = ip_address + core_name + select_ + inurl + limit'''
-    data = urllib.request.urlopen('http://localhost:8983/solr/IRF20P4/select?fl=user.name%2C%20tweet_text&q=tweet_text%3ATrump&wt=json')
+    '''data = urllib.request.urlopen('http://localhost:8983/solr/IRF20P4/select?fl=user.name%2C%20tweet_text&q=tweet_text%3ATrump&wt=json')
     docs = json.load(data)['response']
     dataframe = []
     for data in docs['docs']:
         df = []
         df.append(data['user.name'][0])
         df.append(data['tweet_text'][0])
-        dataframe.append(df)
-
+        dataframe.append(df)'''
+    
+    dataframe = {'person':['Yash','Arshad','Saurabh','Yohanth'],'language':['English','Hindi','RUssian'],'country':['United States','India','Russia'],'hashtags':['covid','goverment','corrupt']}
     return render_template('base.html', dataframe = dataframe)
+    #return render_template('base.html')
 
 @app.route("/indian_poi_counts")
 def plot_graph():

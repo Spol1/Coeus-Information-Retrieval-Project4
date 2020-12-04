@@ -25,6 +25,11 @@
  */
 body {
   margin: 0;
+  background:linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7)
+        ), url('static',filename="3.jpg");
+  background: url('static',filename="3.jpg");
 }
 
 /**
@@ -830,10 +835,10 @@ legend {
   -ms-flex-align: center;
       align-items: center;
   font-family: 'Poppins', sans-serif;
-  background:         linear-gradient(
+  background:linear-gradient(
           rgba(0, 0, 0, 0.7), 
           rgba(0, 0, 0, 0.7)
-        ), url("\\wsl$\Ubuntu-20.04\home\jolt\Coeus\app\templates\3.jpg");
+        ), url("static/3.jpg");
   #background-repeat: repeat;
   background-size: cover;
   #background-position: center center;
@@ -974,7 +979,7 @@ legend {
 <!======================================HTML======================================================>    
     
 
-   <body>
+   <body background-image:'{{url_for('static', filename='3.jpg')}}'>
      <div class="s006">
       <form action = "http://localhost:5000/result" method = "POST">
         <fieldset>

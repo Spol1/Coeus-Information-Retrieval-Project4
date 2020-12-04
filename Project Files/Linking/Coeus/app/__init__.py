@@ -8,7 +8,7 @@ from pymongo import MongoClient
 from pymongo.errors import ServerSelectionTimeoutError
 import json
 
-app = Flask(__name__,template_folder='templates')
+app = Flask(__name__, static_url_path='/static')
 
 client = MongoClient("mongodb://localhost:27017/")
 db = client["tweetsDB"]
