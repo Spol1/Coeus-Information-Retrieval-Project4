@@ -21,6 +21,7 @@
           rgba(0, 0, 0, 0.7), 
           rgba(0, 0, 0, 0.7)
         ), url("static/3.jpg");
+  background-repeat: repeat-y
   margin: auto;
   display: block;
   vertical-align: middle;
@@ -66,13 +67,15 @@ body, html {
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
-  color: Black;
+  #color: Black;
   display: none;
   height: 100%;
   padding: 100px 20px;
   #-webkit-animation: fadeEffect 0.2s;
   #animation: fadeEffect 0.2s;
-  background:url("static/4.jpg");
+  background-color:antiquewhite;
+  #background:url("static/4.jpg");
+  #background-repeat: repeat;
 }
 
 /* Fade in tabs */
@@ -146,17 +149,17 @@ body, html {
 
 .rsidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width:990px;
-  margin: auto;
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  margin-top: 30px;
-  top: 60px; /* Stay at the top */
-  right: 0;
-  background-color: #fff; /* Black */
-  float:right;
+  width:600px;
+  #margin: auto;
+  #position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  #margin-top: 30px;
+  #top: 60px; /* Stay at the top */
+  #right: 0;
+  #background-color: #fff; /* Black */
+  #float:right;
   background-image:url('2.jpg');
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 20px;
+  #padding-top: 20px;
   border:2px solid #dd;
   border-radius: 3px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
@@ -270,10 +273,10 @@ body, html {
 
 /* Style page content */
 .main {
-  width:600px;
+  width:75%;
   float:center;
   margin-left: 265px; /* Same as the width of the sidebar */
-  margin-top: 10px; /* Same as the width of the sidebar */
+  margin-top: 0px; /* Same as the width of the sidebar */
   padding: 0px 10px;    
     
 }
@@ -365,7 +368,8 @@ div.cardcontainer {
     padding-top: 50px;
     padding: inherit;
     margin-bottom: 10px;
-    margin-left: 20px;
+    #margin-right: 20px;
+    margin-left: 5px;
     width:600px;
     line-height:25px;
     text-align:left;
@@ -398,6 +402,20 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
     #padding-right: 1px;
     border-radius: 0px;
 }
+    
+.w3-tag-blue2 {
+    background-color: #0000ff;
+    margin-top: 70px;
+    height:5px;
+    right: 0;
+    position: absolute;
+    width: 1300px;
+    color: #fff;
+    display: inline-block;
+    #padding-left: 2px;
+    #padding-right: 1px;
+    border-radius: 0px;
+}   
     
 .w3-tag-red {
     background-color: #ff0000;
@@ -503,27 +521,53 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
 }
    
 .linechart{
-  #padding:20px;
-  width:80%;
-  height:40%;
-  margin: auto;
+  padding:20px;
+  width:1100px;
+  height:auto;
+  margin: auto;    
 }   
 
 .smallBchart{
   padding:20px;
-  width:45%;
+  width:500px;
   height:40%;
   margin: auto;
-  float:left;
 } 
 
 .smallDchart{
   padding:20px;
-  width:45%;
+  width:500px;
   height:40%;
   margin: auto;
-  float:right;
 } 
+    
+.parent {
+position: absolute;
+width: 98%;
+}
+
+.column {
+float:left
+width: 40%;
+height: 100vh;
+
+}
+
+.child {
+position: relative;
+margin: 10px;
+#background-color: rgb(0,0,0);
+border:2px solid #dd;
+border-radius: 3px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color: #fff;
+transition: all 200ms ease-out;
+}
+    
+}
+.child:hover {
+box-shadow: 0 0 6px rgba(35, 173, 278, 1);
+}
 
 #Result {background-color: white;}
 #Analysis {background-color: white;}
@@ -545,7 +589,7 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
     
 
 <div id="Result" class="tabcontent">
- <div class="sidenav">
+    <div class="sidenav">
      <a href="#Facet">Faceted Search</a>
       <label class="container">One
         <input type="radio" checked="checked" name="radio">
@@ -578,14 +622,48 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
       <button class="search-container" type="submit" value="submit">Submit</button>
      </div>  
  </div>
- 
- <div class="rsidenav">
-    <div class="smallBchart"><canvas id="BarChart"></canvas></div>
-	<div class="smallDchart"><canvas id="DoughChart"></canvas></div>
-	<div class="linechart"><canvas id="lineChart"></canvas></div>
- </div>
- 
- <div class="main">
+<div class="main">
+<table  style="border-spacing: 15px; table-layout:fixed; overflow-x: hidden;" >
+    <col width="35%" />
+    <col width="55%" />
+  <tr>
+    <td style="overflow: hidden; vertical-align:top;overflow-x: hidden; horizontal-align:left">    
+   <div class="bordershadow ">
+      <span class="w3-tag-blue" ></span>
+      <div class="P_info"> Profile Details</div>
+      <div class="P_text"> Text</div>
+      <div class="P_foot"> score</div>
+   </div>
+   <div class="bordershadow ">
+      <span class="w3-tag-blue" ></span>
+      <div class="P_info"> Profile Details</div>
+      <div class="P_text"> Text</div>
+      <div class="P_foot"> score</div>
+   </div>
+   <div class="bordershadow ">
+      <span class="w3-tag-blue" ></span>
+      <div class="P_info"> Profile Details</div>
+      <div class="P_text"> Text</div>
+      <div class="P_foot"> score</div>
+   </div>
+   <div class="bordershadow ">
+      <span class="w3-tag-blue" ></span>
+      <div class="P_info"> Profile Details</div>
+      <div class="P_text"> Text</div>
+      <div class="P_foot"> score</div>
+   </div>
+   <div class="bordershadow ">
+      <span class="w3-tag-blue" ></span>
+      <div class="P_info"> Profile Details</div>
+      <div class="P_text"> Text</div>
+      <div class="P_foot"> score</div>
+   </div>
+   <div class="bordershadow ">
+      <span class="w3-tag-blue" ></span>
+      <div class="P_info"> Profile Details</div>
+      <div class="P_text"> Text</div>
+      <div class="P_foot"> score</div>
+   </div>
    <div class="bordershadow ">
       <span class="w3-tag-blue" ></span>
       <div class="P_info"> Profile Details</div>
@@ -602,14 +680,44 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
       {% endfor %}
    <div class="bordershadow ">This is a container<span class="w3-tag-green w3-display-topright" ></span></div>
    <div class="bordershadow ">This is a container<span class="w3-tag-red w3-display-topright" ></span></div>
- </div> 
- 
-</div>
-
-    <div id="Analysis" class="tabcontent">
-        <h3>Analysis</h3>
-        <p>Some news this fine day!</p> 
+    </td>
+    <td style="overflow: hidden; 
+               vertical-align:top;
+               height:1000px;position: 
+               fixed;width:920px;">
+       
+       <span class="w3-tag-blue2" ></span>
+	   
+    </td>
+  </tr>
+</table> 
+</div>  
     </div>
+
+<div id="Analysis" class="tabcontent">
+<table class="parent" style="" >
+  <tr>
+    <th style="width:60%">    
+        <div class="child" style="width:auto;height:600px;">
+            <div class="linechart"><canvas id="lineChart"></canvas></div>
+        </div>
+        <div class="child" style="width:auto;height:200px;"></div>
+        <div class="child" style="width:auto;height:200px;"></div>
+        <div class="child" style="width:auto;height:500px;"></div>
+        <div class="child" style="width:auto;height:200px;"></div>
+    </th>
+    <th style="width:40%">
+        <div class="child" style="width:auto;height:300px;">
+            <div class="smallBchart"><canvas id="BarChart"></canvas></div>
+        </div>
+        <div class="child" style="width:auto;height:200px;"></div>
+        <div class="child" style="width:auto;height:200px;"></div>
+        <div class="child" style="width:auto;height:500px;"></div>
+        <div class="child" style="width:auto;height:500px;"></div>
+    </th>
+  </tr>
+</table> 
+</div>
 
     
 <! ##################################### JS ######################################################## >

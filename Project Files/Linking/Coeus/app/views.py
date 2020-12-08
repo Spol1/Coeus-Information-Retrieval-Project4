@@ -1,8 +1,11 @@
-from app import app,db
+from app import app,conn 
+from .indexer import hit_solr, process_query
 import plotly
 import plotly.graph_objects as go
 import json
-from flask import render_template,redirect, url_for, request,jsonify
+from flask import jsonify, request, render_template
+import pandas as pd
+import json
 
 import pandas as pd
 import urllib.request
@@ -13,15 +16,8 @@ def home():
 
 @app.route("/search")
 def search_tweets():
-    data = [
-        go.Bar(
-            x = ['Boy','Girl'],
-            y = [10, 15],
-            hovertemplate= '<i>%{x}</i> : ' + '<b>%{y}</b>'
-        )
-    ]
-    graphJson = json.dumps(data, cls=plotly.utils.PlotlyJSONEncoder)
-
+    req_data = request.get_json()
+    data = hit_solr(req_data)
     return render_template('index.html', graph = graphJson)
 
 @app.route('/input')
@@ -32,7 +28,9 @@ def input():
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
    if request.method == 'POST':
-      result = request.form
+      data = request.form
+      p_data = data.items()
+      
       return render_template("results.html",result = result)
 
 

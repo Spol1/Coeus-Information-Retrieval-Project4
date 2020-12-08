@@ -1,55 +1,161 @@
-from app import app,db
+from app import app,conn
 import urllib.request
 from urllib.parse import quote
-# from googletrans import Translator
-# translator = Translator()
+import os, requests, uuid
 
 import re
 import json
 
+def translate_query(query):
+    subscription_key = "00d153d5f06546d3a11aaa8c5a14206c"
+    endpoint = "https://api.cognitive.microsofttranslator.com/"
+    path = '/translate?api-version=3.0'
+    params = '&to=en&to=hi&to=it'
+    api_url = endpoint + path + params
+
+    headers = {
+        'Ocp-Apim-Subscription-Key': subscription_key,
+        'Content-type': 'application/json',
+        'X-ClientTraceId': str(uuid.uuid4())
+    }
+    body = [{
+        'text': query
+    }]
+
+    request = requests.post(api_url, headers=headers, json=body)
+    response = request.json()
+    translated_text = {}
+    translated_text['lang'] = response[0]['detectedLanguage']['language']
+    for i in range(3):
+        translated_text[response[0]['translations'][i]['to']] = response[0]['translations'][i]['text']
+    return translated_text
 
 def process_query(query):
-    return urllib.parse.quote_plus(query)
+    query = query.replace(r"\n", " ")
+    query = query.replace(":", r"\:")
+    query = "(" + query + ")"
+    query = quote(query)
+    return query
 
-def hit_solr(query):
+def process_filter(filter):
+    new_filter = ""
+    for f in filter:
+        new_filter += f + " "
+    new_filter = new_filter.strip()
+    new_filter = new_filter.replace("\n", " ")
+    new_filter = new_filter.replace(":", r"\:")
+    new_filter = "(" + new_filter + ")"
+    new_filter = quote(new_filter)
+    return new_filter
+
+def hit_solr(req_data):
     
     core_name = "IRF20P4"
-    ip_address = "localhost:8983/solr/"
+    # core_name = "gettingstarted"
+    ip_address = "http://localhost:8983/solr/"
     select_ = "/select?"
     or_string = "%20OR%20"
     and_string = "%20AND%20"
+ 
+    
+    
+    # For testing
+    # request
+    # {
+    #     "search": "coronavirus", 
+    #     "filters": {
+    #         "lang": "en" or "hi" or "it", 
+    #         "country": "USA" or "India" or "Italy"], 
+    #         "poi": ["joebiden","realdonaldtrump", "pmoindia"],
+    #         "hashtag": ["TrumpVirus","COVID19"],
+    #     }
+    # }
+    query = req_data['search']
+    filters = req_data['filters']
+    hashtags = []
+    country = []
+    poi = []
+    langu = []
+    if filters:
+        # filters = json.loads(filters)
+        hashtags = filters.get('hashtag', None)
+        country = filters.get('country', None)
+        poi = filters.get('poi', None)
+        langu = filters.get('lang', None)
 
-    # querylang = translator.detect(query).lang
-    query = 'Modi'
-    querylang = 'en'
-    hashtags = re.findall(r"#(\w+)", query)
-    hashtags = str(hashtags)
-    hashtags = hashtags.replace('[','')
-    hashtags = hashtags.replace(']','')
-    hashtags = quote(hashtags)
-    # query_en = translator.translate(query, src='', dest='en').text
-    # query_it = translator.translate(query, src='', dest='it').text
-    # query_hi = translator.translate(query, src='', dest='hi').text
-    # print(query_en + " || " + query_hi + " || " + query_it)
-    query_en = query
+    query_hashtag = process_filter(hashtags) if hashtags else None
+    query_country = process_filter(country) if country else None
+    query_poi = process_filter(poi) if poi else None
+    query_langu = process_filter(langu) if langu else None
+
+    text_hashtags = re.findall(r"#(\w+)", query)
+    text_hashtags = str(text_hashtags)
+    text_hashtags = text_hashtags.replace('[','')
+    text_hashtags = text_hashtags.replace(']','')
+    text_hashtags = quote(text_hashtags)
+    
+    translated_query = translate_query(query)
+    query_en = translated_query['en']
+    query_hi = translated_query['hi']
+    query_it = translated_query['it']
     query_en = process_query(query_en)
-    query_hi = process_query(query_en)
-    query_it = process_query(query_en)
+    query_hi = process_query(query_hi)
+    query_it = process_query(query_it)
+
+    querylang = translated_query['lang']
+
+    highlight_search = "&hl.fl=full_text,text_*&hl=on&hl.simple.pre=%3Cspan%20class%3D%22tweet-hl%22%3E&hl.simple.post=%3C%2Fspan%3E"
+    if text_hashtags == "":
+        query_parser = "&defType=edismax&qf=hashtags%5E1.2%20"
+    else:
+        query_parser = "&defType=edismax&qf="
+    facet_search = "&facet.field=poi_name&facet.field=lang&facet.field=country&facet.field=hashtags&facet.limit=10&facet=on&facet.mincount=1"
+    stopwords = "&stopwords=true"
 
     # select_fields = "fl=" + process_query("id, country, user.screen_name, full_text, tweet_text, tweet_lang, tweet_date, score")
-    select_fields = ""
-    limit = "&indent=true&rows=5&wt=json"
-    inurl = select_fields + "&q=" + "tweet_hashtags" + '%3A%20' + hashtags + or_string + 'text_en' + '%3A%20' + query_en + or_string + 'text_it' + '%3A%20' + query_it + or_string + 'text_hi' + '%3A%20' + query_hi
+    select_fields = "&fl=*"
+    limit = "&indent=true&rows=2&wt=json"
+    if text_hashtags == "":
+        first_inurl = select_fields + "&q=%28" + 'text_en' + '%3A%20' + query_en + or_string + 'text_it' + '%3A%20' + query_it + or_string + 'text_hi' + '%3A%20' + query_hi + "%29"
+    else:
+        first_inurl = select_fields + "&q=%28" + "hashtags" + '%3A%20' + text_hashtags + or_string + 'text_en' + '%3A%20' + query_en + or_string + 'text_it' + '%3A%20' + query_it + or_string + 'text_hi' + '%3A%20' + query_hi + "%29"
+    first_inurl = ip_address + core_name + select_ + first_inurl
+    temp_array = []
+    temp_flag = False
+
+
+    if hashtags:
+        temp_array.append("hashtags:" + query_hashtag)
+        temp_flag = True
+    if country:
+        temp_array.append("country:" + query_country)
+        temp_flag = True
+    if poi:
+        temp_array.append("poi_name:" + query_poi)
+        temp_flag = True
+    if langu:
+        temp_array.append("lang:" + query_langu)
+        temp_flag = True
 
     if querylang == 'hi':
-        inurl = inurl + "&defType=dismax&qf=tweet_hashtags%5E1.7%20text_en%5E1.6%20text_hi%5E2.5%20text_it%5E2.0&tie=0.1"
+        mid_inurl = "text_en%5E1.6%20text_hi%5E2.5%20text_it%5E2.0&tie=0.1"
     elif querylang == 'it':
-        inurl = inurl + "&defType=dismax&qf=tweet_hashtags%5E1.7%20text_en%5E1.6%20text_hi%5E2.2%20text_it%5E2.7&tie=0.1"
+        mid_inurl = "text_en%5E1.6%20text_hi%5E2.2%20text_it%5E2.7&tie=0.1"
+    elif querylang == 'en':
+        mid_inurl = "text_en%5E2.5%20text_hi%5E2.0%20text_it%5E2.0&tie=0.1"
+
+
+    if temp_flag:
+        inurl = first_inurl + and_string + and_string.join(temp_array)+ query_parser + mid_inurl + highlight_search + facet_search + limit
+
     else:
-        inurl = inurl + "&defType=dismax&qf=tweet_hashtags%5E1.7%20text_en%5E2.5%20text_hi%5E2.0%20text_it%5E2.0&tie=0.1"
-
-    inurl = ip_address + core_name + select_ + inurl + limit
+        inurl = first_inurl + query_parser + mid_inurl + highlight_search + facet_search + stopwords + limit
+    print(inurl)
     data = urllib.request.urlopen(inurl)
-    docs = json.load(data)['response']['docs']
-
-    return docs
+    # docs = data.read()
+    # docs = docs.decode('utf-8')
+    # fin_data = json.loads(docs)
+    # numFound = fin_data['response']['numFound']
+    # return fin_data['response']['docs'], numFound
+    print(data)
+    return data
