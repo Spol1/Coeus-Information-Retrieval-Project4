@@ -596,23 +596,29 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
         <span class="checkmark"></span>
       </label>
      <a href="#">Name</a>
-    {% for Person in dataframe['person'] %}  
-      <label class="container">{{ Person }}
-        <input name='poi' type="checkbox" id="{{ Person }}">
+    {% for key,value in result['analysis']['poi_name'] %}  
+      <label class="container">{{ key }}
+        <input name='poi' type="checkbox" id="{{ key }}">
         <span class="checkmark"></span>
       </label>
     {% endfor %} 
     <a href="#">Language</a>
-    {% for Language in dataframe['language'] %}  
-      <label class="container">{{ Language }}
-        <input name='lang' type="checkbox" id="{{ Language }}">
+    {% for key,value in result['analysis']['lang']  %}  
+      <label class="container">{{ key }}
+        <input name='lang' type="checkbox" id="{{ key }}">
         <span class="checkmark"></span>
       </label>
     {% endfor %} 
      <a href="#">Country</a>
-    {% for country in dataframe['country'] %} 
-      <label class="container">{{ country }}
-        <input name='country' type="checkbox" id="{{ country }}">
+    {% for key,value in result['analysis']['country']  %} 
+      <label class="container">{{ key }}
+        <input name='country' type="checkbox" id="{{ key }}">
+        <span class="checkmark"></span>
+      </label>
+    {% endfor %}
+    {% for key,value in result['analysis']['sentiment']  %} 
+      <label class="container">{{ key }}
+        <input name='sentiment' type="checkbox" id="{{ key }}">
         <span class="checkmark"></span>
       </label>
     {% endfor %}

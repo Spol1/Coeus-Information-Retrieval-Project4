@@ -9,7 +9,7 @@
 <style>
 /* The navigation bar */
 .navbar {
-  margin-left: -10px;
+  #margin-left: -10px;
   #z-index: 1; /* Stay on top */
   #overflow: hidden;
   #height: auto;
@@ -463,23 +463,51 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
 .P_info {
     #border: 1px solid black;
     height: 30px;
-    width: 100%;
-    position: absolute;
+    width: 93%;
+    float: left;
+    #position: left;
     text-indent:5px; 
     right: 0;
     top: 0;
 }
+.P_button {
+    #background-color: aqua;
+    #border: 1px solid black;
+    height: 30px;
+    width: 7%;
+    float: right;
+    #position: right;
+    text-indent:5px; 
+    right: 0;
+    top: 0;
+}
+    
+.P_but_link{
+  #background-color:aliceblue;
+  border: 1px solid black;
+  height: 15px; 
+  width: 15px;
+  #border: none;
+  color: white;
+  padding: 2px 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;    
+    }
 
 .P_text {
     #border: 1px solid black;
-    height: 40px;
+    height: 50px;
     width: 100%;
     left: 10px;
     padding-right: 10px;
     position: absolute;
     right: 0;
     line-height: 15px;
-    top: 30px;
+    top: 20px;
     white-space:  pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis; // This is where the magic happens
@@ -575,13 +603,13 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
 #About {background-color: orange;}
 </style>
 </head>
-<body>
+<body >
     
 <! ##################################### BODY ###################################################### >
 
 <div class="tabby">
-<div class="navbar">
-    <a href="#home">Home</a>
+<div class="navbar" >
+    <a href="#home">COEUS</a>
 </div>
     <button class="tablink" onclick="openPage('Result', this, 'red')" id="defaultOpen">Results</button>
     <button class="tablink" onclick="openPage('Analysis', this, 'green')">Analysis</button>
@@ -590,92 +618,69 @@ box-shadow: 0 0 6px rgba(35, 173, 278, 1);
 
 <div id="Result" class="tabcontent">
     <div class="sidenav">
-     <a href="#Facet">Faceted Search</a>
+<!--<a href="#Facet">Faceted Search</a>
       <label class="container">One
         <input type="radio" checked="checked" name="radio">
         <span class="checkmark"></span>
-      </label>
+      </label>-->
+    <form action = "http://localhost:5000/search" method = "POST">
      <a href="#">Name</a>
-    {% for Person in dataframe['person'] %}  
-      <label class="container">{{ Person }}
-        <input name='poi' type="checkbox" id="{{ Person }}">
+    {% for key in result['analysis']['poi_name'] %}  
+      <label class="container">{{ key }}
+        <input name="name[{{ key }}]" type="checkbox" id="{{ key }}">
         <span class="checkmark"></span>
       </label>
     {% endfor %} 
     <a href="#">Language</a>
-    {% for Language in dataframe['language'] %}  
-      <label class="container">{{ Language }}
-        <input name='lang' type="checkbox" id="{{ Language }}">
+    {% for key in result['analysis']['lang']  %}  
+      <label class="container">{{ key }}
+        <input name="lang[{{ key }}]" type="checkbox" id="{{ key }}">
         <span class="checkmark"></span>
       </label>
     {% endfor %} 
      <a href="#">Country</a>
-    {% for country in dataframe['country'] %} 
-      <label class="container">{{ country }}
-        <input name='country' type="checkbox" id="{{ country }}">
+    {% for key in result['analysis']['country']  %} 
+      <label class="container">{{ key }}
+        <input name="country[{{ key }}]" type="checkbox" id="{{ key }}">
+        <span class="checkmark"></span>
+      </label>
+    {% endfor %}
+    <a href="#">Sentiment</a>
+    {% for key in result['analysis']['sentiment']  %} 
+      <label class="container">{{ key }}
+        <input name="sentiment[{{ key }}]" type="checkbox" id="{{ key }}">
         <span class="checkmark"></span>
       </label>
     {% endfor %}
     <a href="#">Hashtags</a>     
      <div class="s_box">
-      <input class="search-container" type="text" placeholder="Search.." name="search">
+      <input class="search-container" type="text" placeholder="Search.." name="hashtags">
       <button class="search-container" type="submit" value="submit">Submit</button>
-     </div>  
+     </div>
+    </form>
  </div>
 <div class="main">
 <table  style="border-spacing: 15px; table-layout:fixed; overflow-x: hidden;" >
     <col width="35%" />
     <col width="55%" />
   <tr>
-    <td style="overflow: hidden; vertical-align:top;overflow-x: hidden; horizontal-align:left">    
+    <td style="overflow: hidden; vertical-align:top;overflow-x: hidden; horizontal-align:left"> 
+    {% for _ in result['tweets'] %}
    <div class="bordershadow ">
       <span class="w3-tag-blue" ></span>
-      <div class="P_info"> Profile Details</div>
-      <div class="P_text"> Text</div>
-      <div class="P_foot"> score</div>
-   </div>
-   <div class="bordershadow ">
-      <span class="w3-tag-blue" ></span>
-      <div class="P_info"> Profile Details</div>
-      <div class="P_text"> Text</div>
-      <div class="P_foot"> score</div>
-   </div>
-   <div class="bordershadow ">
-      <span class="w3-tag-blue" ></span>
-      <div class="P_info"> Profile Details</div>
-      <div class="P_text"> Text</div>
-      <div class="P_foot"> score</div>
-   </div>
-   <div class="bordershadow ">
-      <span class="w3-tag-blue" ></span>
-      <div class="P_info"> Profile Details</div>
-      <div class="P_text"> Text</div>
-      <div class="P_foot"> score</div>
-   </div>
-   <div class="bordershadow ">
-      <span class="w3-tag-blue" ></span>
-      <div class="P_info"> Profile Details</div>
-      <div class="P_text"> Text</div>
-      <div class="P_foot"> score</div>
-   </div>
-   <div class="bordershadow ">
-      <span class="w3-tag-blue" ></span>
-      <div class="P_info"> Profile Details</div>
-      <div class="P_text"> Text</div>
-      <div class="P_foot"> score</div>
-   </div>
-   <div class="bordershadow ">
-      <span class="w3-tag-blue" ></span>
-      <div class="P_info"> Profile Details</div>
-      <div class="P_text"> Text</div>
-      <div class="P_foot"> score</div>
-   </div>
-      {% for data in dataframe %}
-   <div class="bordershadow ">
-      <span class="w3-tag-blue" ></span>
-      <div class="P_info">{{ data[0] }}</div>
-      <div class="P_text"><font size="1">{{ data[1] }}</font></div>
-      <div class="P_foot"> score</div>
+      <div class="P_info">{{ _['user.name'][0] }}</div>
+      <div class="P_button">
+          <form action="https://twitter.com/coeus/status/{{ _['id'] }}">
+            <input type="submit" class="P_but_link" style=" float: left;
+                                                            background-color:aquamarine" />
+          </form>
+          <form action="https://google.com">
+            <input type="submit" class="P_but_link" style=" float: left;
+                                                            background-color:aqua" />
+          </form>
+      </div>
+      <div class="P_text"><font size="1">{{ _['tweet_text'][0] }}</font></div>
+      <div class="P_foot">{{ _['created_at'] }}</div>
    </div>
       {% endfor %}
    <div class="bordershadow ">This is a container<span class="w3-tag-green w3-display-topright" ></span></div>
